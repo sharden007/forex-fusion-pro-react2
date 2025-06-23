@@ -29,7 +29,7 @@
             
             <div class="hero-content">
                 <section class="flex flex-col items-center mt-8">
-                 <img src="./src/assets/images/ff_image2.png" alt="Forex Fusion Pro" class="w-80 mb-6 rounded shadow-medium">
+                 <img src="./src/assets/images/ff_image2.png" alt="Forex Fusion Pro" class="w-80 mb-6 rounded shadow-medium" style="width: 40%;">
                   <h1 class="text-3xl font-bold mb-2">Forex Fusion Pro EA</h1>
                                   <!-- Existing feature list and call-to-action buttons go here -->
                 </section>
@@ -157,7 +157,6 @@
             <p class="section-subtitle">Secure your license to Forex Fusion Pro today and start experiencing the future of Forex trading.</p>
             <div class="pricing-grid">
                 <div class="price-card">
-                    <h2>Coming Soon</h2>
                     <h3>Monthly Subscription</h3>
                     <p class="price">$350<span>/month</span></p>
                     <ul>
@@ -167,12 +166,31 @@
                         <li><i class="fas fa-check-circle"></i> Cancel Anytime</li>
                     </ul>
                     <!-- PayPal Monthly Subscription Button Placeholder -->
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_MONTHLY_BUTTON_ID">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    </form>
+                    
+
+                    <div id="paypal-button-container-P-0N784170X0916814RNBM6C4Y"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AfjrxQUdF4lm_j3ByfhdycPND0wMcpK9P4JPS7p8wDe7KVDEnHNsuN-1Cj0weg2NoZu3cLo_U9zqkggN&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-0N784170X0916814RNBM6C4Y'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-0N784170X0916814RNBM6C4Y'); // Renders the PayPal button
+</script>
+
+                    
                 </div>
                 <div class="price-card featured-price-card">
                     <span class="ribbon">Limited Time Offer!</span>
@@ -187,12 +205,13 @@
                         <li><i class="fas fa-check-circle"></i> Significant Savings!</li>
                     </ul>
                     <!-- PayPal One-Year License Button Placeholder -->
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="YOUR_PAYPAL_ONE_YEAR_BUTTON_ID">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    </form>
+                    <style>.pp-MGXETURB3VYLW{text-align:center;border:none;border-radius:1.5rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+                     <form action="https://www.paypal.com/ncp/payment/MGXETURB3VYLW" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                       <input class="pp-MGXETURB3VYLW" type="submit" value="Buy Now" />
+                       <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                       <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+                     </form>
+                    
                 </div>
             </div>
             <p class="guarantee-text">Your investment is backed by **The Jaguar Investment Group's** commitment to excellence and your trading success.</p>
