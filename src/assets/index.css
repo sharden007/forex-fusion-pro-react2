@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;       /* adjust as needed for spacing */
+    right: 10px;     /* adjust as needed for spacing */
+    display: flex;
+    align-items: center;
+    gap: 8px;        /* space between image and text */
+    background-color: transparent; /* optional: add background if needed */
+}
+
+.logo img {
+    height: 40px;    /* adjust for desired logo size */
+    width: auto;     /* keeps aspect ratio */
+}
+
+.logo span {
+    font-size: 14px; /* adjust text size */
+    color: #000;     /* change color if needed */
+}
+
